@@ -28,7 +28,7 @@ public:
 				if(dist[nbr] == INT_MAX){
 					q.push(nbr);
 					dist[nbr] = dist[node] + 1;
-					p[nbr] = node;
+					parent[nbr] = node;
 				}
 			}
 		}

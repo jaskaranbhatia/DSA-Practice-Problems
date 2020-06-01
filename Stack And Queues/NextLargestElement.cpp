@@ -1,24 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void findNextLargest(int arr[],int n){
+vector<int> findNextLargest(int arr[],int n){
 	stack<int> s;
-	s.push(arr[0]);
+	s.push(0);
+	vector<int> ans(n,0);
 	for(int i=1;i<n;i++){
-		while(!s.empty() && s.top() < arr[i]){
-			cout<<arr[i]<<" ";
+		if(arr[i] <= arr[s.top()]){
+			s.push(i);
+		}
+		else{
+			ans[s.top()] = arr[s.top()];
 			s.pop();
 		}
-		s.push(arr[i]);
 	}
 	while(!s.empty()){
-		cout<<"-1"<<" ";
+		ans[s.top()] = -1;
 		s.pop();
 	}
+	return ans;
 }
 //Performs very bad when arrat is in descending order
 int main(){
 	int arr[] = {11,13,21,3};
 	int n = sizeof(arr)/sizeof(arr[0]);
-	findNextLargest(arr,n);
+	vector<int> ans;
+	ans = findNextLargest(arr,n);
+	for(auto num:ans){
+		cout<<num<<" ";
+	}
 }
