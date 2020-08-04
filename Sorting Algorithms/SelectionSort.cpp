@@ -1,3 +1,6 @@
+// Time Complexity
+// O(n^2)
+
 #include<iostream>
 using namespace std;
 
@@ -15,8 +18,8 @@ void selectionSort(int arr[],int n){
 			if(arr[j]<arr[min_idx]){
 				min_idx = j;
 			}
-			swap(arr[min_idx],arr[i]);
 		}
+		swap(arr[min_idx],arr[i]);
 	}
 }
 
@@ -33,3 +36,4 @@ int main(){
 	print(arr,n);
 	return 0;
 }
+

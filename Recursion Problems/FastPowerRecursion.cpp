@@ -17,3 +17,4 @@ int fastPower(int a,int b){
 int main(){
     cout<<fastPower(5,3);
 }
+

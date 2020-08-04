@@ -13,7 +13,7 @@ Pair findSum(ll arr[],ll n,ll sum){
     ll result = arr[0];
     Pair p;
     while(i<=j){
-        if(j >=n+1 || i >= n){
+        if(j >= n+1 || i >= n){
             p.idx1 = p.idx2 = -1;
             break;
         }

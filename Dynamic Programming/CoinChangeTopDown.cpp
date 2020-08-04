@@ -15,12 +15,12 @@ int minCoins(int n,int coins[],int T,int dp[]){
 			ans = min(ans,subpro+1);
 		}
 	}
-	dp[n] = ans;
+	return dp[n] = ans;
 }
 
 int main(){
-	int N = 15;
-	int coins[] = {1,7,10};
+	int N = 3;
+	int coins[] = {1,2};
 	int dp[100] = {0};
 	int T = sizeof(coins)/sizeof(coins[0]);
 	cout<<minCoins(N,coins,T,dp)<<endl;

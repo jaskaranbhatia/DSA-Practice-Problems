@@ -7,10 +7,10 @@ int minSteps(int n){
 	for(int i=2;i<=n;i++){
 		int opt1,opt2,opt3;
 		opt1 = opt2 = opt3 = INT_MAX;
-		if(n%3 == 0){
+		if(i%3 == 0){
 			opt1 = dp[i/3] + 1;
 		}
-		if(n%2 == 0){
+		if(i%2 == 0){
 			opt2 = dp[i/2] + 1;
 		}
 		opt3 = dp[i-1] + 1;
@@ -25,3 +25,5 @@ int main(){
 	cout<<minSteps(n);
 	return 0;
 }
+
+

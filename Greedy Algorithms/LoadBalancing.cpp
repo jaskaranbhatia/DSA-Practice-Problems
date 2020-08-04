@@ -22,8 +22,12 @@ int main(){
 		diff = 0;
 		for(int i=0;i<n;i++){
 			diff += arr[i]-load;
-			int ans = max(diff,-diff);
-			max_load = max(max_load,ans);	
+			if(diff < 0){
+				max_load = max(max_load,-diff);
+			}
+			else{
+				max_load = max(max_load,diff);
+			}	
 		}
 		cout<<max_load<<endl;
 	}

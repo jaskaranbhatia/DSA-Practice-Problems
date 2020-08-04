@@ -19,7 +19,7 @@ int lis(int arr[],int n){
 	}
 	return best;
 }
-
+	
 int main(){
 	int n;
 	cin>>n;

@@ -17,7 +17,7 @@ void kadaneAlgo(int arr[],int n){
 }
 
 int main(){
-	int arr[] = {-4,3,2,-1,3};
+	int arr[] = {-4,-1};
 	int n = sizeof(arr)/sizeof(arr[0]);
 	kadaneAlgo(arr,n);
 }

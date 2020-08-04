@@ -21,3 +21,4 @@ int main(){
 	cout<<ladder_bottomup(n,k)<<endl;
 	return 0;
 }
+

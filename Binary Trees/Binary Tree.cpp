@@ -82,6 +82,18 @@ void levelOrderPrint(Node *root){
 	}
 }
 
+void printLeafNode(Node *root){
+	if(root == NULL){
+		return;
+	}
+	if(root->left == NULL && root->right == NULL){
+		cout<<root->data<<" ";
+		return;
+	}
+	printLeafNode(root->left);
+	printLeafNode(root->right);
+}
+
 //Level Order Print - O(n)
 void bfs(Node *root){
 	queue<Node*> q;
@@ -218,11 +230,6 @@ HBPair isHeightBalance(Node *root){
 
 int main(){
 	Node *root = buildTree();
-	if(isHeightBalance(root).balance){
-		cout<<"Balanced";
-	}
-	else{
-		cout<<"Not Balanced";
-	}
+	printLeafNode(root);
 }
 

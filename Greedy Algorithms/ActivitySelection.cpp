@@ -28,7 +28,7 @@ int main(){
 		ll i=0,j=1,ans=1;
 		while(i<n && j<n){
 			if(p[i].first <= p[j].second){
-				i = j
+				i = j;
 				j++;
 				ans++;
 			}
@@ -36,6 +36,7 @@ int main(){
 				j++;
 			}
 		}
+		cout<<ans<<endl;
 	}
 	return 0;
 }
