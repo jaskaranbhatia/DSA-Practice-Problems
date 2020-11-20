@@ -14,6 +14,18 @@ int partition(int arr[],int l, int r){
 	return (i+1);	
 }
 
+int part(int arr[],int l, int r){
+	int x = arr[r], i = l;
+	for(int j=l;j<=r-1;j++){
+		if(arr[j] <= x){
+			swap(arr[i],arr[j]);
+			i++;
+		}
+	}
+	swap(arr[i],arr[r]);
+	return i;
+}
+
 int partition1(int arr[],int l,int e)
 {
 	int pivot=arr[l];
@@ -33,7 +45,7 @@ int partition1(int arr[],int l,int e)
 
 void quickSort(int arr[],int l,int r){
 	if(l<r){
-		int p = partition1(arr,l,r);
+		int p = part(arr,l,r);
 		quickSort(arr,l,p-1);
 		quickSort(arr,p+1,r);
 	}

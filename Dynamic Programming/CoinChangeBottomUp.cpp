@@ -18,7 +18,7 @@ int minCoins(int N,int coins[],int T){
 int main(){
 	int N;
 	cin>>N;
-	int coins[] = {1,2,5};
+	int coins[] = {1,5,7};
 	int T = sizeof(coins)/sizeof(coins[0]);
 	cout<<minCoins(N,coins,T);
 	return 0;

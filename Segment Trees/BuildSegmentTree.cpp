@@ -1,4 +1,4 @@
- #include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 void buildTree(int *arr,int *tree,int start,int end,int treeNode){

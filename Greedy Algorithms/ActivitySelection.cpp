@@ -2,16 +2,6 @@
 #define ll long long int
 using namespace std;
 
-/*
-Explanation ------>>>>>
-Pick the next activity whose finish time is least among the 
-remaining activities and the start time is more than or equal 
-to the finish time of previously selected activity.Sort the activities
-according to their finishing time so that one can always consider the 
-next activity as minimum finishing time activity.
-*/
-
-
 int main(){
 	ll t,n;
 	cin>>t;
