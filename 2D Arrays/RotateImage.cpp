@@ -25,6 +25,14 @@ void swap(int &a,int &b){
 }
 
 void rotate(int **arr,int n){
+	//To take transpose
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			if(i<j){
+				swap(arr[i][j],arr[j][i]);	
+			}
+		}
+	}
 	for(int i=0;i<n;i++){
 		int start_col = 0;
 		int end_col = n-1;
@@ -32,14 +40,6 @@ void rotate(int **arr,int n){
 			swap(arr[i][start_col],arr[i][end_col]);
 			start_col++;
 			end_col--;
-		}
-	}
-	//To take transpose
-	for(int i=0;i<n;i++){
-		for(int j=0;j<n;j++){
-			if(i<j){
-				swap(arr[i][j],arr[j][i]);	
-			}
 		}
 	}
 }  
@@ -65,7 +65,7 @@ int main(){
 		arr[i] = new int[m];
 	}	
 	input_2dArray(arr,n,m);
-	rotate_stl(arr,n);
+	rotate(arr,n);
 	output_2dArray(arr,n,m);
 	return 0;
 }

@@ -29,12 +29,16 @@ void print(int arr[],int n){
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
 }
 
 int main(){
-    int arr[] = {1,2,5,4,3};
+    int arr[] = {2,1,5,4,3};
     int n = sizeof(arr)/sizeof(arr[0]);
+    cout<<"Unsorted Array is : ";
+    print(arr,n);
     bubbleSort(arr,n);
+    cout<<"Sorted Array is : ";
     print(arr,n);
     return 0;
 }

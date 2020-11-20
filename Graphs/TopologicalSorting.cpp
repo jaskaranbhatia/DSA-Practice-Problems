@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 template<typename T>
 class Graph{
 	unordered_map<T,list<T>> l;

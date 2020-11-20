@@ -45,16 +45,20 @@ void mergeSort(int arr[],int l,int r){
 	}
 }
 
-void print(int arr[],int n){
+void printArray(int arr[],int n){
 	for(int i=0;i<n;i++){
 		cout<<arr[i]<<" ";
 	}
+	cout<<endl;
 }
 
 int main(){
 	int arr[] = {5,3,4,2,1};
 	int n = sizeof(arr)/sizeof(arr[0]);
+	cout<<"Array before sorting : ";
+	printArray(arr,n);
 	mergeSort(arr,0,n-1);
-	print(arr,n);
+	cout<<"Array after sorting : ";
+	printArray(arr,n);
 	return 0;
 }

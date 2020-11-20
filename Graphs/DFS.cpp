@@ -3,7 +3,7 @@ using namespace std;
 
 template<typename T>
 class Graph{
-	unordered_map<T,list<T>> l;
+	unordered_map< T,list< T > > l;
 public:
 	void addEdge(int x,int y){
 		l[x].push_back(y);
@@ -21,11 +21,6 @@ public:
 	}
 	void dfs(T src){
 		map<T,bool> visited;
-		for(auto p:l){
-			T node = p.first;
-			visited[node] = false;
-		}
-		// call helper fnc
 		dfs_helper(src,visited);
 	}
 };

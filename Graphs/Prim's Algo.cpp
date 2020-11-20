@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 	int n,m;
 	cin>>n>>m;
-	vector<pair<int,int>> gr[n+1];
+	vector< pair<int,int> > gr[n+1];
 	int vis[n+1] = {0};
 	for(int i=0;i<m;i++){
 		int x,y,w;

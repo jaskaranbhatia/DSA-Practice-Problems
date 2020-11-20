@@ -1,57 +1,49 @@
-#include <iostream>
-#define ll long long int
+#include <bits/stdc++.h>
+
 using namespace std;
 
-class Pair{
-public:
-    ll idx1;
-    ll idx2;
-};
-
-Pair findSum(ll arr[],ll n,ll sum){
-    ll i=0,j=1;
-    ll result = arr[0];
-    Pair p;
-    while(i<=j){
-        if(j >= n+1 || i >= n){
-            p.idx1 = p.idx2 = -1;
-            break;
+int main()
+ {
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        long long k;
+        cin>>n>>k;
+        int arr[n];
+        
+        int last=0;
+        int start=0;
+        unsigned long long  currsum=0;
+        bool flag=false;
+        
+        for(int i=0;i<n;i++)
+            cin>>arr[i];
+        
+        for(int i=0;i<n;i++)
+        {
+            currsum += arr[i];
+            if(currsum>=k)
+            {
+                last=i;
+                while(k<currsum && start<last)
+                {
+                    currsum -= arr[start];
+                    ++start;
+                }
+                
+                if(currsum==k)
+                {
+                    cout<<start+1<<" "<<last+1<<endl;
+                    flag = true;
+                    break;
+                }
+            }
         }
-        if(result == sum){
-            break;
-        }
-        else if(result < sum){
-            result += arr[j++];
-        }
-        else{
-            result -= arr[i++];
-        }
+        if(flag==false)
+        cout<<-1<<endl;
+        
     }
-    if(p.idx1 == -1){
-        return p;
-    }
-    p.idx1 = i;
-    p.idx2 = j;
-    return p;
-}
-
-int main() {
-	ll T;
-	cin>>T;
-	while(T--){
-	    ll n,sum;
-	    cin>>n>>sum;
-	    ll arr[n];
-	    for(ll i=0;i<n;i++){
-	        cin>>arr[i];
-	    }
-	    Pair p = findSum(arr,n,sum);
-	    if(p.idx1 == -1){
-	        cout<<-1<<endl;
-	    }
-	    else{
-	        cout<<(p.idx1)+1<<" "<<p.idx2<<endl;
-	    }
-	}
 	return 0;
 }

@@ -28,7 +28,6 @@ void wavePrint(int **arr,int n,int m){
 		}
 		else{
 			//Bottom-Up Traversal
-	
 			for(int row=n-1;row>=0;row--){
 				cout<<arr[row][col]<<" ";
 			}	
