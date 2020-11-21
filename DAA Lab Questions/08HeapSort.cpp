@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Heapify function for Max Heap
 void heapify(vector<int> &heap, int idx, int n){
     int leftIdx = 2*idx + 1;
     int rightIdx = 2*idx + 2;
@@ -21,6 +22,7 @@ void heapify(vector<int> &heap, int idx, int n){
     heapify(heap, largestIdx, n);
 }
 
+// It build's a Max heap
 void buildHeap(vector<int> &heap, int n){
     for(int i=n-1;i>=0;i--){
         heapify(heap, i, n);

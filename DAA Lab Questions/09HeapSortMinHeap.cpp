@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Heapify function for Min Heap
 void heapify(vector<int> &heap, int idx, int n){
     int leftIdx = 2*idx + 1;
     int rightIdx = 2*idx + 2;

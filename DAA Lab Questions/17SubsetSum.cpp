@@ -29,8 +29,7 @@ int main()
     cin >> n;
     int a[n];
     cout << "Enter the values" << endl;
-    for (i = 0; i < n; i++)
-        cin >> a[i];
+    for (i = 0; i < n; i++) cin >> a[i];
     cout << "Enter the value of sum" << endl;
     cin >> sum;
     bool f = false;
