@@ -19,7 +19,7 @@ int kthSmallest(int arr[], int l, int r, int k){
 		if(pos-l == k-1){
 			return arr[pos];
 		}
-		else if(pos-l >= k-1){
+		else if(pos-l > k-1){
 			return kthSmallest(arr,l,pos-1,k);
 		}
 		else{

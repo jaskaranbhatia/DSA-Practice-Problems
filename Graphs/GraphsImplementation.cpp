@@ -12,7 +12,7 @@ public:
 		}
 	}
 	void printAdjList(){
-		for(auto p:l){
+		for(auto p:l){.
 			string city = p.first;
 			list<pair<string,int>> nbrs = p.second;
 			cout<<city<<"-> ";

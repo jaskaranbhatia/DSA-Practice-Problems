@@ -5,7 +5,7 @@ vector<vector<int>> threeSum(vector<int> &nums){
 	if(nums.size() < 3){
 		return {};
 	}
-	int n = nums.size();
+ 	int n = nums.size();
 	sort(nums.begin(),nums.end());
 	vector<vector<int>> ans;
 	set<vector<int>> s;

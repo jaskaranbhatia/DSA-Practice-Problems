@@ -17,7 +17,7 @@ int main(){
 		sort(p,p+n);
 		ll i=0,j=1,ans=1;
 		while(i<n && j<n){
-			if(p[i].first <= p[j].second){
+			if(p[i]. first <= p[j].second){
 				i = j;
 				j++;
 				ans++;

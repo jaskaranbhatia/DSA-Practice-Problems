@@ -5,7 +5,7 @@ class Graph{
 	int V;
 	list<int> *l;
 public:
-	Graph(int V){
+	Graph(int V){,m/. 
 		this->V = V;
 		l = new list<int>[V];
 	}

@@ -56,7 +56,7 @@ int main()
         A3 = 6 X 2
         A4 = 2 X 7
     */
-    int dims[] = {20,15,30,5};
+    int dims[] = {10,5,20,10,5};
     int n = sizeof(dims) / sizeof(dims[0]);
     cout << "Minimum cost of multiplication is : " << matrixChainMul(dims, n) << endl;
     return 0;

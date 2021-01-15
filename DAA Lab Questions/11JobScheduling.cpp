@@ -40,10 +40,10 @@ void jobScheduling(vector<Job> arr, int n){
 
 int main(){
     vector<Job> arr;
-    arr.push_back({'a', 2, 100});
-    arr.push_back({'b', 1, 19});
-    arr.push_back({'c', 2, 27});
-    arr.push_back({'d', 1, 25});
+    arr.push_back({'j1', 2, 100});
+    arr.push_back({'j2', 1, 19});
+    arr.push_back({'j3', 2, 27});
+    arr.push_back({'j4', 1, 25});
     arr.push_back({'e', 3, 15}); 
     int n = arr.size();
     jobScheduling(arr, n); 

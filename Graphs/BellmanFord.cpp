@@ -10,7 +10,7 @@ class Graph{
 public:
 	int v,e;
 	Edge *edge;
-	Graph(int v,int e){
+	Graph(int v, int e){
 		this->v = v;
 		this->e = e;
 		edge = new Edge[e];
