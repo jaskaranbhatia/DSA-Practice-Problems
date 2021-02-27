@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-template<typename T>
+                emplate<typename T>
 class Graph{
 	map<T,list<T>> l;
 public:
@@ -9,7 +8,7 @@ public:
 		l[x].push_back(y);
 		l[y].push_back(x);
 	}	
-	void bfs(T src){
+	void bfs(T src){                                        
 		map<T,int> visited;
 		queue<T> q;
 		q.push(src);

@@ -50,7 +50,7 @@ void removeTheLoop(Node* head)
         {
             tortoise->next = NULL;
             return;
-        }
+        } 
         tortoise = tortoise->next;
     }
 }

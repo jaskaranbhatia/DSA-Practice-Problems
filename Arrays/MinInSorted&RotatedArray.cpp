@@ -16,6 +16,7 @@ int main()
 {  
     int arr1[] = {5, 6, 1, 2, 3, 4};  
     int n1 = sizeof(arr1)/sizeof(arr1[0]);  
-    cout << "The minimum element is " << findMin(arr1, 0, n1-1) << endl;
+    cout << "The minimum e
+	lement is " << findMin(arr1, 0, n1-1) << endl;
     return 0;
 }

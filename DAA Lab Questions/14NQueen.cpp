@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
 
-
 bool canPlace(char board[][100],int row,int col,int n){
     ///Row mein queen to nahi h
     for(int i=0;i<n;i++){

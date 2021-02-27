@@ -2,7 +2,7 @@
 using namespace std;
 
 int make_change(int *coins,int n,int money){
-	int ans;
+	int ans = 0;
 	while(money>0){
 		int idx = upper_bound(coins,coins+n,money) - coins - 1;
 		cout<<coins[idx]<<" ";

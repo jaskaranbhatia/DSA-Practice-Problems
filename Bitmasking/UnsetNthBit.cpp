@@ -14,3 +14,4 @@ int main(){
 	int num = 5;
 	cout<<unSetNthBit(num,1);	
 }
+
