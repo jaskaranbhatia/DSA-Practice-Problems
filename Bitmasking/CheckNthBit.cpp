@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool checkNthBit(int num,int n){
-	if(num & (1<<n-1)){
+bool checkNthBit(int num,int i){
+	if(num | ~(1<<i-1)){
 		return true;
 	}
 	else{

@@ -14,7 +14,7 @@ public:
 		unordered_map<int,int> dist;
 		for(auto node_pair:l){
 			int node = node_pair.first;
-			dist[node] = INT_MAX;
+			dist[node] = INT_MAX;	
 		}
 		// Make a set to find node with miniumum distance
 		set<pair<int,int>> s;

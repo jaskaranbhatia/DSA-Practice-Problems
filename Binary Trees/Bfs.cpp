@@ -11,7 +11,7 @@ public:
 		left = NULL;
 		right = NULL;
 	}
-};
+}; 
 
 void insertNode(Node *root,int data){
 	queue<Node*> q;
@@ -81,20 +81,45 @@ void bfs(Node *root){
 	}
 }
 
+void findAverageLevel(Node* a)
+{
+    //write your code here
+    queue<Node*> q;
+    q.push(a);
+    q.push(NULL);
+    float count = 0;
+    float sum = 0;
+    while(!q.empty()){
+      Node *f = q.front();
+      sum += f->data;
+      count++;
+      q.pop();
+      if(f == NULL){
+        float avg = sum/count;
+        cout<<avg<<" ";
+        sum = 0;
+        count = 0;
+        if(!q.empty()){
+          q.push(NULL);
+        }
+      }
+      else{
+        if(f->left != NULL){
+          q.push(f->left);
+        }
+        if(f->right != NULL){
+          q.push(f->right);
+        }
+      }
+    }
+}
+
+
 int main(){
 	Node *root = new Node(5);
 	root->left = new Node(3);
 	root->right = new Node(4);
 	root->left->left = new Node(2);
 	root->right->right = new Node(1);
-	insertNode(root,9);
-	insertNode(root,8);
-	bfs(root);
-	if(searchNode(root,1)){
-		cout<<"Present";
-	}
-	else{
-		cout<<"Not Present";
-	}
-	return 0;
+	findAverageLevel(root);
 }

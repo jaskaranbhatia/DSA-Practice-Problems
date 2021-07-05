@@ -14,7 +14,7 @@ void heapify(vector<int> &heap,int idx,int n){
 	if(rightIdx < n && heap[rightIdx] > heap[largestIdx]){
 		largestIdx = rightIdx;
 	}
-	if(largestIdx == idx){
+ 	if(largestIdx == idx){
 		return;
 	}
 	swap(heap[idx],heap[largestIdx]);

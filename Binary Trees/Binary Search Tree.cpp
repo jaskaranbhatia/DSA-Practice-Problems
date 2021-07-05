@@ -43,7 +43,6 @@ bool search(Node *root,int data){
 	if(root->data == data){
 		return true;
 	}
-	//Recursive Search
 	if(data < root->data){
 		return search(root->left,data);
 	}
@@ -60,6 +59,8 @@ void inorder(Node *root){
 	cout<<root->data<<" ";
 	inorder(root->right);
 }
+
+
 
 void preorder(Node *root){
 	if(root == NULL){
@@ -117,6 +118,7 @@ Node* deleteInBST(Node *root,int data){
 	else{
 		root->right = deleteInBST(root->right,data);
 		return root;
+		
 	}
 }
 

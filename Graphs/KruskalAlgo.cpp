@@ -36,7 +36,7 @@ int main(){
 		int x,y,w;
 		cin>>x>>y>>w;
 		x--;
-		y--;
+		y--;w
 		edges[i] = {w,x,y};
 	}
 	sort(edges.begin(),edges.end());

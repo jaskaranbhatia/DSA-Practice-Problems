@@ -30,7 +30,7 @@ void spiralPrint(int **a,int n,int m){
 		startRow++;
 		for(int i=startRow;i<=endRow;i++){
 			cout<<a[i][endCol]<<" ";
-		}
+		}     
 		endCol--;
 		if(endRow > startRow) {
 			for(int i=endCol;i>=startCol;i--){
